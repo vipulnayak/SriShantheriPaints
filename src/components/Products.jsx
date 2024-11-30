@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1572969176403-0d6e50b9ee5a';
@@ -6,7 +6,6 @@ const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1572969176403-0d6e50b9
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const handleImageError = (e) => {
     e.target.src = FALLBACK_IMAGE;
@@ -48,7 +47,7 @@ const Products = () => {
     }
   };
 
-  const products = [
+  const products = useMemo(() => [
     // Interior Products
     {
       id: 1,
@@ -135,7 +134,7 @@ const Products = () => {
       features: ['High Gloss', 'Scratch Resistant', 'Quick Drying'],
       colors: ['#CD853F', '#8B4513', '#A0522D'],
     }
-  ];
+  ], []);
 
   const categories = ['All', 'Interior', 'Exterior', 'Wood'];
 
@@ -145,7 +144,7 @@ const Products = () => {
         ? products
         : products.filter(product => product.category === activeCategory)
     );
-  }, [activeCategory]);
+  }, [activeCategory, products]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50">
