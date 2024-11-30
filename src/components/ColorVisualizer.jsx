@@ -32,7 +32,7 @@ const ColorVisualizer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4"
           >
-            Explore our wide range of colors and visualize how they'll look in your space
+            Explore our wide range of colors and visualize how they&apos;ll look in your space
           </motion.p>
         </div>
 

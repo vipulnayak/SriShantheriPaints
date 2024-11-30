@@ -34,7 +34,7 @@ const AboutPage = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Story</h2>
             <p className="text-gray-600">
               Since our establishment, Sri Shantheri Paints has been committed to providing 
-              high-quality paint solutions. We've built our reputation on trust, quality, 
+              high-quality paint solutions. We&apos;ve built our reputation on trust, quality, 
               and excellent customer service, serving both residential and commercial clients 
               throughout Karnataka.
             </p>

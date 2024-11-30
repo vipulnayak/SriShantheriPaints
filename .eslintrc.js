@@ -23,6 +23,8 @@ module.exports = {
     'no-unused-vars': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/no-unescaped-entities': ['error', { forbid: ['>', '}'] }],
+    'no-useless-catch': 'warn'
   },
   settings: {
     react: {
